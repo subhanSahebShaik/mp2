@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block blockName %}
+    <center>
+        <img src="{% static 'images/error.jpg' %}" width="50%">
+        <p style="font-style: italic;">The page you requested may not exist.<a href="{% url 'home' %}" style="text-decoration: none;"> Click here to visit home page.</a></p>
+    </center>
+{% endblock %}

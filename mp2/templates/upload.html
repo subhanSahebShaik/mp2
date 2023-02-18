@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block blockName %}
+<center>
+    <br><br>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table style="text-align: center;">
+            <tr>
+                <td>Upload Dataset&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="file" name="fileUpload" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Attribute Name&nbsp;&nbsp;&nbsp;</td>
+                <td style="text-align: left;"><input type="text" name="y_label" class="form-control"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Continue" style="border: 0px; background-image: linear-gradient(to right, white, lightskyblue,white); width: 100%;" class="form-control"></td>
+            </tr>
+        </table>
+    </form>
+    <br><br><br>
+</center>
+{% endblock %}

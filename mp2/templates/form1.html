@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block blockName %}
+
+<div id="form1">
+    <center >
+    <form method="post" style=" width: 50%; box-shadow: 2px 2px 5px black; padding: 20px;">
+        {% csrf_token %}
+        <table>
+            {% for field in form1 %}
+            <tr>
+                <td>{{ field.label }}</td>
+                <td>{{ field }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="submit" value="Predict" style="font-style: italic;font-size: 20px;border: 0px;background-image: linear-gradient(to right,white,lightskyblue,white);width: 100%;">
+                </td>
+            </tr>
+        </table>
+    </form><br>
+    <a href="https://www.kaggle.com/datasets/mohannapd/mobile-price-prediction" style="text-decoration: none;" target="_blank">Click here to know about the dataset being used here.</a>
+    </center>
+</div>
+{% endblock %}

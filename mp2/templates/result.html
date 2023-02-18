@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+{% block blockName %}
+	{% if Sent %}
+		Feedback Sent Successfully!
+		<div class="alert success">
+			<span class="closebtn">&times;</span>  
+			<strong>Success!</strong> Indicates a successful or positive action.
+		</div>
+		<style>
+			.alert {
+			  padding: 20px;
+			  background-color: #f44336;
+			  color: white;
+			  opacity: 1;
+			  transition: opacity 0.6s;
+			  margin-bottom: 15px;
+			}
+			
+			.alert.success {background-color: #04AA6D;}
+			
+			.closebtn {
+			  margin-left: 15px;
+			  color: white;
+			  font-weight: bold;
+			  float: right;
+			  font-size: 22px;
+			  line-height: 20px;
+			  cursor: pointer;
+			  transition: 0.3s;
+			}
+			
+			.closebtn:hover {
+			  color: black;
+			}
+		</style>
+		<script>
+			var close = document.getElementsByClassName("closebtn");
+			var i;
+			
+			for (i = 0; i < close.length; i++) {
+			  close[i].onclick = function(){
+				var div = this.parentElement;
+				div.style.opacity = "0";
+				setTimeout(function(){ div.style.display = "none"; }, 600);
+			  }
+			}
+		</script>
+	{% endif %}
+	<p align="center" style="font-style: italic;font-size: 30px;"> As best of my prediction the suitable price for your product is <h3 align="center">{{ price }}</h3></p>
+	<br><br><br><br><br><br><br>
+	<center style="font-style: italic;font-size: 20px;">
+	Thank you for using me, you can metion any feedback here about me.
+	<form method="post">
+		{% csrf_token %}
+		<table>
+			<tr>
+				<td><label>e-Mail</label></td>
+				<td><input type="text" name="email" placeholder="e-Mail"><br></td>
+			</tr>
+			<tr>
+				<td><label>Feedback</label></td>
+				<td><textarea cols="25" rows="5" name="text" placeholder="Your feedback"></textarea><br></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" style="border: 0px; padding: 10px;font-weight: bold;background-image: linear-gradient(to right,white,lightskyblue,white);width: 100%;" value="Send"></td>
+			</tr>
+		</table>
+	</center>
+	</form>
+{% endblock %}

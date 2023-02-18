@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% block blockName %}
+<div id="form2">
+    <center>
+    <form method="post" enctype="multipart/form-data" style="width: 50%; box-shadow: 2px 2px 5px black;padding: 20px;">
+        {% csrf_token %}
+        <table>
+            {% for feature in features %}
+                <tr>
+                    <td name="">{{ feature }}</td>
+                    <td><input type="number" step="any" value="0" name="{{ feature }}" class="form-control"></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Predict" style="font-style: italic;font-size: 20px;border: 0px;background-image: linear-gradient(to right,white,lightskyblue,white);width: 100%;">
+    </form>
+    </center>
+</div>
+{% endblock %}

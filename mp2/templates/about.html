@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block blockName %}
+<center>
+<div style="width: 80%; box-shadow:2px 2px 4px black;text-align: left;padding: 20px;font-style: italic;" id="about">
+    <h3>About Me</h3>
+    <details>
+        <summary>Who Am I</summary>
+        I am a online Mobile Price Predicting tool developed using a machine learning algorithm.
+    </details>
+    <details>
+        <summary>Why Am I</summary>
+        To fix an effective price for a product, the company have to depend on the past data 
+        and predict a good price for the product. And in this step of prediction I can help 
+        the companies to give a second opinion in fraction of seconds.
+    </details>
+    <details>
+        <summary>How I Differ From Others</summary>
+        May so many developers designed online mobile price predictors, all they are only stick with one 
+        dataset, which can be get older in coming days. But I can learn the and predict the best price for
+        you by considering the modern dataset from you.
+    </details>
+    <details>
+        <summary>Who Developed Me</summary>
+        I am developed by a team of students(Sk.Subhan Saheb, K.Jyothshna Devi, K.Madhuri, Ch.Sai Nirmal)
+        under guidence of M.S.Kumar Reddy(Asst. Professor),CSE Department, Sri Vasavi Engineering College.
+    </details>
+    <h3>FAQ's</h3>
+    <details>
+        <summary>Which Machine Learning algorithm are you using?</summary>
+        I'm using a Machine Learning algorithm called Random forest
+    </details>
+    <details>
+        <summary>Is your prediction always perfect?</summary>
+        No, my prediction is not going perfect always. It will goes wrong incase of extrapolated data.<br>
+    </details>
+    <details>
+        <summary>Do you think random forest good one?</summary>
+        Yeah! I think it can predict a good price because of averaging more decisions.So the line can be fitted more accurately as shown below.<br>
+    </details>
+    <details>
+        <summary>Is data uploaded by user saved?</summary>
+        No. I won't save your data. I just read the file and use the data for prediction. I will forget your data on completion of your request/session.
+    </details>
+</div>
+</center>
+<style>
+    summary{
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        margin-left: -20px;
+    }
+    details{
+        width: 80%;
+        margin-left: 10%;
+        padding: 1px;
+    }
+</style>
+{% endblock %}
