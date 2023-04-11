@@ -1,9 +1,9 @@
-# mp2
+# MP2
 Mobile Price Predictor (MP2) Using Random Forest Algorithm
  - A mobile price suggestor based on the features.
  - Upload your own dataset to get more accurate price suggestion.
 
-# How To Run
+## How To Run
 Steps to run this project
  - Download the archive
  - Extract to a desired location
@@ -16,4 +16,4 @@ Steps to run this project
  - Get interacted with the application on Web browser by entering following URL <br>
    `http://127.0.0.1:8000`
 
-# How To Use
+## How To Use
