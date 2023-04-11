@@ -4,5 +4,16 @@ Mobile Price Predictor (MP2) Using Random Forest Algorithm
  - Upload your own dataset to get more accurate price suggestion.
 
 # How To Run
-To run this project install all requirements that are mentioned in requirements.txt with the following command
-`pip install -r requirements.txt`
+Steps to run this project
+ - Download the archive
+ - Extract to a desired location
+ - Make sure you system having Python installed
+ - Now open cmd in the project base folder
+ - Install all requirements using the following command
+   `pip install -r requirements.txt`
+ - Start server with the following command
+   `python manage.py runserver`
+ - Get interacted with the application on Web browser by entering following URL
+   `http://127.0.0.1:8000`
+
+# How To Use
